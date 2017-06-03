@@ -1,24 +1,33 @@
-var robos = [
-  { name: "gemini", image: "http://i.imgur.com/EZDkT8V.png" },
-  { name: "hard", image: "http://i.imgur.com/xe27bqS.png" },
-  { name: "magnet", image: "http://i.imgur.com/DjgBY9v.png" },
-  { name: "needle", image: "http://i.imgur.com/JOTdbDd.png" },
-  { name: "shadow", image: "http://i.imgur.com/grEQpGr.png" },
-  { name: "snake", image: "http://i.imgur.com/lXq35f3.png" },
-  { name: "spark", image: "http://i.imgur.com/P8xMGeg.png" },
-  { name: "top", image: "http://i.imgur.com/tLznhhp.png" }
+var mm3 = [
+  { name: "gemini", image: "img/mm3/gemini.png" },
+  { name: "hard", image: "img/mm3/hard.png" },
+  { name: "magnet", image: "img/mm3/magnet.png" },
+  { name: "needle", image: "img/mm3/needle.png" },
+  { name: "shadow", image: "img/mm3/shadow.png" },
+  { name: "snake", image: "img/mm3/snake.png" },
+  { name: "spark", image: "img/mm3/spark.png" },
+  { name: "top", image: "img/mm3/top.png" }
+];
+
+var mm2 = [
+  { name: "air", image: "img/mm2/air.png" },
+  { name: "bubble", image: "img/mm2/bubble.png" },
+  { name: "clash", image: "img/mm2/clash.png" },
+  { name: "flash", image: "img/mm2/flash.png" },
+  { name: "heat", image: "img/mm2/heat.png" },
+  { name: "metal", image: "img/mm2/metal.png" },
+  { name: "quick", image: "img/mm2/quick.png" },
+  { name: "wood", image: "img/mm2/wood.png" }
 ];
 
 function generateRobo(num,robo) {
 	return $('<div class="robo"><input class="check_box" id="' + robo.name + num + '_box" type="checkbox" /><label for="' + robo.name + num + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
 }
 
-function generateRobos(numOfSets) {
+function generateRobos(numOfSets,robos) {
 	for(var i=0; i<numOfSets; i++) {
 		var set = $("<div></div>")
 		$('#bg').append(set)
 		robos.map(generateRobo.bind(this,i)).forEach(r => set.append(r))
 	}
 }
-
-$(document).ready(generateRobos.bind(this,2))
