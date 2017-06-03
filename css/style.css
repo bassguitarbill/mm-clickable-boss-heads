@@ -1,0 +1,27 @@
+.check_box {
+    display:none;
+    padding: 2 2 2 2px;
+}
+
+div {
+  display: inline
+}
+
+.check_box + label{
+    height: 64px;
+    width: 80px;
+    display:inline-block;
+    padding: 2px;
+}
+
+.check_box:checked + label{
+    background: none !important;
+    height: 64px;
+    width: 80px;
+    display:inline-block;
+    padding: 2px;
+}
+
+body {
+  background-color: #000;
+}
