@@ -9,12 +9,16 @@ var robos = [
   { name: "top", image: "http://i.imgur.com/tLznhhp.png" }
 ];
 
-function generateRobo(robo) {
-	return $('<div><input class="check_box" id="' + robo.name + '_box" type="checkbox" /><label for="' + robo.name + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
+function generateRobo(num,robo) {
+	return $('<div class="robo"><input class="check_box" id="' + robo.name + num + '_box" type="checkbox" /><label for="' + robo.name + num + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
 }
 
-function generateRobos() {
-	robos.map(generateRobo).forEach(r => $('#bg').append(r))
+function generateRobos(numOfSets) {
+	for(var i=0; i<numOfSets; i++) {
+		var set = $("<div></div>")
+		$('#bg').append(set)
+		robos.map(generateRobo.bind(this,i)).forEach(r => set.append(r))
+	}
 }
 
-$(document).ready(generateRobos)
+$(document).ready(generateRobos.bind(this,2))
