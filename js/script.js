@@ -20,7 +20,18 @@ var mm2 = [
   { name: "wood", image: "img/mm2/wood.png" }
 ];
 
+var mm3castle = [
+  { name: "turtles", image: "img/mm3/turtles.png" },
+  { name: "devil", image: "img/mm3/devil.png" },
+  { name: "clones", image: "img/mm3/clones.png" },
+  { name: "refights", image: "img/mm3/refights.png" },
+  { name: "wily", image: "img/mm3/wily.png" },
+  { name: "gamma", image: "img/mm3/gamma.png" }
+];
+
 function generateRobo(num,robo) {
+	if(robo.name == 'refights')
+		return $('<div class="robo"><input class="check_box wide" id="' + robo.name + num + '_box" type="checkbox" /><label for="' + robo.name + num + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
 	return $('<div class="robo"><input class="check_box" id="' + robo.name + num + '_box" type="checkbox" /><label for="' + robo.name + num + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
 }
 

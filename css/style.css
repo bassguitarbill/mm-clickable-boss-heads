@@ -14,12 +14,20 @@ div.robo{
     padding: 2px;
 }
 
+.check_box.wide + label{
+    width: 250px;
+}
+
 .check_box:checked + label{
     background: none !important;
     height: 64px;
     width: 80px;
     display:inline-block;
     padding: 2px;
+}
+
+.check_box.wide:checked + label{
+    width: 250px;
 }
 
 body {
