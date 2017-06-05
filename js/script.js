@@ -35,10 +35,8 @@ function generateRobo(num,robo) {
 	return $('<div class="robo"><input class="check_box" id="' + robo.name + num + '_box" type="checkbox" /><label for="' + robo.name + num + '_box" style="background:url(\'' + robo.image + '\') no-repeat;"/></div>')
 }
 
-function generateRobos(numOfSets,robos) {
-	for(var i=0; i<numOfSets; i++) {
-		var set = $("<div></div>")
-		$('#bg').append(set)
-		robos.map(generateRobo.bind(this,i)).forEach(r => set.append(r))
-	}
+function generateRobos(setNumber,robos) {
+	var set = $("<div></div>")
+	$('#bg').append(set)
+	robos.map(generateRobo.bind(this,setNumber)).forEach(r => set.append(r))
 }
