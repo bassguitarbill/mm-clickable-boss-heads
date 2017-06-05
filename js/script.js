@@ -10,14 +10,14 @@ var mm3 = [
 ];
 
 var mm2 = [
-  { name: "air", image: "img/mm2/air.png" },
-  { name: "bubble", image: "img/mm2/bubble.png" },
-  { name: "clash", image: "img/mm2/clash.png" },
   { name: "flash", image: "img/mm2/flash.png" },
+  { name: "bubble", image: "img/mm2/bubble.png" },
+  { name: "wood", image: "img/mm2/wood.png" },
   { name: "heat", image: "img/mm2/heat.png" },
   { name: "metal", image: "img/mm2/metal.png" },
   { name: "quick", image: "img/mm2/quick.png" },
-  { name: "wood", image: "img/mm2/wood.png" }
+  { name: "air", image: "img/mm2/air.png" },
+  { name: "clash", image: "img/mm2/clash.png" }
 ];
 
 var mm3castle = [
